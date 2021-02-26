@@ -8,8 +8,8 @@ export class Event {
 }
 
 export class ErrorEvent extends Event {
-    public message: string;
-    public error: Error;
+    public message?: string;
+    public error?: Error;
     constructor(error: Error, target: any) {
         super('error', target);
         this.message = error.message;
