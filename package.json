@@ -24,9 +24,6 @@
         "automatic"
     ],
     "author": "Pedro Ladaria <pedro.ladaria@gmail.com>",
-    "files": [
-        "dist/*"
-    ],
     "license": "MIT",
     "devDependencies": {
         "@types/jest": "^25.1.2",
