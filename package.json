@@ -2,9 +2,7 @@
     "name": "reconnecting-websocket",
     "version": "4.4.0",
     "description": "Reconnecting WebSocket",
-    "main": "./dist/reconnecting-websocket-cjs.js",
-    "module": "./dist/reconnecting-websocket-mjs.js",
-    "types": "./dist/reconnecting-websocket.d.ts",
+    "main": "index.ts",
     "scripts": {
         "build": "npm run clean && rollup -c && uglifyjs --compress --mangle -o dist/reconnecting-websocket-iife.min.js dist/reconnecting-websocket-iife.js",
         "test": "jest --coverage",

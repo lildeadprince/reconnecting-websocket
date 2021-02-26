@@ -59,7 +59,7 @@ export type ListenersMap = {
     close: Array<Events.WebSocketEventListenerMap['close']>;
 };
 
-export default class ReconnectingWebSocket {
+export default class Index {
     private _ws?: WebSocket;
     private _listeners: ListenersMap = {
         error: [],
@@ -104,16 +104,16 @@ export default class ReconnectingWebSocket {
     }
 
     get CONNECTING() {
-        return ReconnectingWebSocket.CONNECTING;
+        return Index.CONNECTING;
     }
     get OPEN() {
-        return ReconnectingWebSocket.OPEN;
+        return Index.OPEN;
     }
     get CLOSING() {
-        return ReconnectingWebSocket.CLOSING;
+        return Index.CLOSING;
     }
     get CLOSED() {
-        return ReconnectingWebSocket.CLOSED;
+        return Index.CLOSED;
     }
 
     get binaryType() {
@@ -178,9 +178,7 @@ export default class ReconnectingWebSocket {
         if (this._ws) {
             return this._ws.readyState;
         }
-        return this._options.startClosed
-            ? ReconnectingWebSocket.CLOSED
-            : ReconnectingWebSocket.CONNECTING;
+        return this._options.startClosed ? Index.CLOSED : Index.CONNECTING;
     }
 
     /**
